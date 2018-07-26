@@ -3,6 +3,7 @@ buildscript {
         springBootVersion = '1.5.13.RELEASE'
     }
     repositories {
+        mavenLocal()
         mavenCentral()
     }
     dependencies {

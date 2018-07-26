@@ -18,11 +18,9 @@ ribbon:
  ReadTimeout: 1000
  SocketTimeout: 1000
 
-#hystrix:
-#  command:
-#    circuitBreaker:
-#      requestVolumeThreshold: 2
+hystrix:
+  command:
+    circuitBreaker:
+      requestVolumeThreshold: 2
 
-management:
-  security:
-    enabled: false
+
