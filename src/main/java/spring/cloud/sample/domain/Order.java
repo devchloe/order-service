@@ -1,6 +1,6 @@
 package spring.cloud.sample.domain;
 
-import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import spring.cloud.sample.clients.ItemClient;
 
 import javax.persistence.*;
