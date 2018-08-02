@@ -1,13 +1,18 @@
 package spring.cloud.sample.clients;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import spring.cloud.sample.controller.OrderController;
 
 import java.util.Collection;
 
 @Component
 public class ItemClient {
+
+    private static Logger log = LoggerFactory.getLogger(OrderController.class);
 
     private ItemResource itemResource;
     private Collection<Item> itemsCache = null;
@@ -24,6 +29,7 @@ public class ItemClient {
     }
 
     public Collection<Item> getItemsCache() {
+        log.info("Executed fallback, and returned Items cache data");
         return itemsCache;
     }
 

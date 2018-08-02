@@ -38,13 +38,13 @@ public class OrderController {
     @GetMapping("/items")
     @ResponseBody
     public Collection<Item> getItems() {
-        log.info("==========Sending request /items..");
+        log.info("Sending request /items..");
         return itemClient.findAll(); }
 
     @GetMapping("/customers")
     @ResponseBody
     public Collection<Customer> customers() {
-        log.info("==========Sending request /customers..");
+        log.info("Sending request /customers..");
         return customerClient.findAll();
     }
 

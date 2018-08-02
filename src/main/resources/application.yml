@@ -3,7 +3,7 @@ spring:
     name: orders
 
 server:
-  port: ${orders.port:8091}
+  port: ${order.port:8091}
 
 eureka:
   client:
@@ -15,12 +15,19 @@ eureka:
 
 ribbon:
  ConnectTimeout: 1000
- ReadTimeout: 1000
+ ReadTimeout: 10000
  SocketTimeout: 1000
 
 hystrix:
   command:
-    circuitBreaker:
-      requestVolumeThreshold: 2
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
+      circuitBreaker:
+        requestVolumeThreshold: 2
+        errorThresholdPercentage: 50
+        sleepWindowInMilliseconds: 3000
 
 

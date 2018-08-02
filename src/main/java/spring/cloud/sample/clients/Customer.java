@@ -1,7 +1,7 @@
 package spring.cloud.sample.clients;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringBuilder;
 
 public class Customer {
 
